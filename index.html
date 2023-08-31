@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multi-page Survey</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript" src="script.js" defer></script>
+</head>
+
+<body>
+    <form action="https://formspree.io/f/mrgwqnkl" method="POST" class="form">
+        <h1 class="text-center">Survey Form</h1>
+        <!-- Progress bar -->
+        <div class="progressbar">
+            <div class="progress" id="progress"></div>
+            <div class="progress-step progress-step-active" data-title="Basic Info"></div>
+            <div class="progress-step" data-title="Qualifications"></div>
+            <div class="progress-step" data-title="Address"></div>
+        </div>
+
+        <!-- Steps -->
+        <div class="form-step form-step-active">
+            <div class="input-group">
+                <label for="username">Full Name</label>
+                <input type="text" name="fullname" id="username" required>
+            </div>
+            <div class="input-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" name="dob" id="dob" required>
+            </div>
+            <div class="input-group">
+                <a href="#" class="btn btn-next width-50 ml-auto">Next</a>
+            </div>
+        </div>
+
+        <div class="form-step">
+            <div class="input-group">
+                <label for="highestQualification">Highest Qualification</label>
+                <input type="text" name="highestQualification" id="highestQualification" required>
+            </div>
+            <div class="input-group">
+                <label for="specialization">Specialization</label>
+                <input type="text" name="specialization" id="specialization" required>
+            </div>
+            <div class="btns-group">
+                <a href="#" class="btn btn-prev">Previous</a>
+                <a href="#" class="btn btn-next">Next</a>
+            </div>
+        </div>
+
+        <div class="form-step">
+            <div class="input-group">
+                <label for="country">Nationality</label>
+                <input type="text" name="country" id="country" required>
+            </div>
+            <div class="input-group">
+                <label for="ID">National ID</label>
+                <input type="number" name="ID" id="ID" required>
+            </div>
+            <div class="input-group">
+                <label for="address">Address</label>
+                <textarea name="address" id="address" cols="50" rows="5"></textarea>
+            </div>
+            <div class="btns-group">
+                <a href="#" class="btn btn-prev">Previous</a>
+                <a href="#" class="btn btn-next">Next</a>
+            </div>
+        </div>
+
+        <div class="form-step">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" cols="40" rows="8" placeholder="How can we help you?"></textarea>
+            <div class="btns-group">
+                <a href="#" class="btn btn-prev">Previous</a>
+                <input type="submit" value="Submit" class="btn">
+            </div>
+        </div>
+
+    </form>
+</body>
+
+</html>
